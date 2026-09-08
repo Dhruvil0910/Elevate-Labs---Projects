@@ -1,0 +1,26 @@
+name: fraud_detection
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.11.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.1.1          # state management
+  http: ^1.2.0              # API calls
+  fl_chart: ^1.2.0         # charts (ROC, confusion matrix)
+  file_picker: ^12.2.0       # CSV batch upload
+  intl: ^0.20.3             # date formatting
+  lottie: ^3.1.0            # loading animations (optional)
+  url_launcher: ^6.3.1      # transaction downloads
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

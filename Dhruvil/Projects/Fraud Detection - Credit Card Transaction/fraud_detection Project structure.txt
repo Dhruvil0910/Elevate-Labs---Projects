@@ -1,0 +1,44 @@
+fraud_detection/
+├── backend/                        # Flask app
+│   ├── app.py                      # Flask entry point + routes
+│   ├── ml/
+│   │   ├── train.py                # Offline training script
+│   │   ├── ml_service.py           # Singleton model loader
+│   │   ├── preprocess.py           # Reusable preprocessing
+│   │   └── models/                 # Saved .pkl files
+│   │       ├── isolation_forest.pkl
+│   │       ├── lof.pkl
+│   │       ├── xgboost.pkl
+│   │       ├── scaler.pkl
+│   │       └── metrics.json
+│   ├── database.py                 # SQLite helper
+│   ├── requirements.txt
+│   └── static/                     # ROC curve image
+│
+└── frontend/                       # Flutter app
+    ├── lib/
+    │   ├── main.dart
+    │   ├── services/
+    │   │   └── api_service.dart     # All HTTP calls to Flask
+    │   ├── providers/
+    │   │   ├── prediction_provider.dart
+    │   │   └── metrics_provider.dart
+    │   ├── models/
+    │   │   ├── prediction_result.dart
+    │   │   └── transaction.dart
+    │   └── screens/
+    │       ├── home_screen.dart
+    │       ├── predict_screen.dart
+    │       ├── dashboard_screen.dart
+    │       ├── batch_screen.dart
+    │       └── history_screen.dart
+    └── pubspec.yaml
+
+
+🔑 Test Credentials
+Login to the Flutter app with:
+
+Analyst 1: analyst1@frauddetect.com / Test@1234
+Analyst 2: analyst2@frauddetect.com / Test@1234
+Viewer: viewer1@frauddetect.com / Test@1234
+Admin: admin@frauddetect.com / Admin@1234 (original)
